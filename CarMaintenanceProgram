@@ -1,13 +1,13 @@
 import java.util.Scanner;
 import java.io.*;
 public class CarMaintenance{
-    String model;
-    String make;
-    int yearMade;
-    int yearNow;
-    int price;
-    int damages;
-    boolean carStatus = false;
+    private String model;
+    private String make;
+    private int yearMade;
+    private int yearNow;
+    private int price;
+    private int damages;
+    private boolean carStatus = false;
 
     public static void main(String [] args)throws IOException{
         System.out.println("Welcome to CarMaintenance!");
@@ -16,6 +16,11 @@ public class CarMaintenance{
         String data;
         data = "Car Make: " + Car1.make + "\nCar Model: " + Car1.model  + "\nCar Year: " + Car1.yearMade + "\nCurrent Year: " + Car1.yearNow + "\nCar Price: $" + Car1.price + "\n" + Car1.CarMaintenanceCheck(Car1.price, Car1.yearMade, Car1.yearNow);
         Car1.storeInfo(data);
+        CarMaintenance Car2 = new CarMaintenance();
+        Car2.model = Car2.make;
+        Car2.make = null;
+        System.out.println(Car2.model);
+
     }
 
     public void CarLayout(){
@@ -24,9 +29,9 @@ public class CarMaintenance{
         make = keyboard.next();
         System.out.println("What is the model of the car?");
         model = keyboard.next();
-        System.out.println("What is the year of your car?");
+        System.out.println("What is the year of your car? Please enter number");
         yearMade = keyboard.nextInt();
-        System.out.println("What was the price of your car when it was purchased?");
+        System.out.println("What was the price of your car when it was purchased? Please enter number with no symbols or commas");
         price = keyboard.nextInt();
         System.out.println("What is the year now?");
         yearNow = keyboard.nextInt();

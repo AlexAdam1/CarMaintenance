@@ -1,0 +1,23 @@
+public class SimplifiedCarMaintenance {
+private String modelNMake;
+private int year;
+private int price;
+private int carCheck;
+
+    public static void main(String[] args) {
+    SimplifiedCarMaintenance SimpleCar1 = new SimplifiedCarMaintenance("Porsche 911", 2024, 50000);
+    SimplifiedCarMaintenance SimpleCar2 = new SimplifiedCarMaintenance("Porsche Boxer", 2020, 0);
+    SimpleCar2.year = SimpleCar2.price;
+    Integer CarInt = 100;
+    CarInt = null;
+
+
+
+    }
+
+    SimplifiedCarMaintenance(String modelNMake, int year, int price) {
+        this.modelNMake = modelNMake;
+        this.year = year;
+        this.price = price;
+    }
+}

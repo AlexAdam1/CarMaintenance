@@ -16,10 +16,6 @@ public class CarMaintenance{
         String data;
         data = "Car Make: " + Car1.make + "\nCar Model: " + Car1.model  + "\nCar Year: " + Car1.yearMade + "\nCurrent Year: " + Car1.yearNow + "\nCar Price: $" + Car1.price + "\n" + Car1.CarMaintenanceCheck(Car1.price, Car1.yearMade, Car1.yearNow);
         Car1.storeInfo(data);
-        CarMaintenance Car2 = new CarMaintenance();
-        Car2.model = Car2.make;
-        Car2.make = null;
-        System.out.println(Car2.model);
 
     }
 
@@ -95,7 +91,7 @@ public class CarMaintenance{
         }
         if (salvage == 0 && damage == 0 && runs == 0){
             carPrice = carPrice - 5000;
-            }
+        }
         if (salvage == 1 && damage == 0 && runs == 1){
             carPrice = carPrice;
         }
@@ -126,12 +122,12 @@ public class CarMaintenance{
         wordResults = keyboard.next();
         if (wordResults.equalsIgnoreCase("yes")) {
             PrintWriter output = new PrintWriter("CarData.txt");
-                output.println(data);
-                output.close();
-                File file = new File("CarData.txt");
-                if (file.exists()){
-                    System.out.println("Collected information has been stored");
-                }
+            output.println(data);
+            output.close();
+            File file = new File("CarData.txt");
+            if (file.exists()){
+                System.out.println("Collected information has been stored");
             }
         }
     }
+}
